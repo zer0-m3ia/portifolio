@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>spotify copy</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <style>
+            html, body {
+                height: 100%;
+                overflow-x: hidden;
+            }
+            #home {
+                height: 100%;
+            }
+            body {
+                background: url(capa.png),
+                            url(ruido.png),
+                            linear-gradient(50deg,#2e99b9,#3ef826);
+                background-attachment: fixed;
+            }
+            .nav-link:hover {
+                color: #26f877;
+            }
+            .nav-link {
+                color: #fff;
+            }
+            .divisor {
+                width: 1px;
+                background: #fff;
+                margin: 12px 15px;
+            }
+            .btn-custom {
+                color: white;
+                border-radius: 500px;
+                -moz-border-radius: 500px;
+                -webkit-border-radius: 500px;
+                text-transform: uppercase;
+                transition: background 0.4s, color 0.4;
+                padding: 10px 15px;
+            }
+            .btn-preto {
+                background-color: #30b91e;
+                border:2px solid #30b91e;
+            }
+            .btn-preto:hover {
+                border:2px solid white;
+                color: white;
+                background-color: #30b91e;
+            }
+            .btn-branco {
+                border:2px solid white;
+            }
+            .btn-branco:hover {
+                border: 2px solid white;
+                color: black;
+                background-color: white;
+            }
+            h1 {
+                font-size: 70px;
+                font-weight: 700;
+                letter-spacing: -0.05em;
+                margin-bottom: 50px;
+                color: white;
+            }
+            h2 {
+                max-width: 670px;
+                font-weight: 700;
+                color: #17c400;
+            }
+            h3 {
+                font-weight: 700;
+                font-size: 2em;
+                letter-spacing: -0.04em;
+                color: #000000;
+           }
+           ul {
+                list-style: none;
+            }
+           .conteudo1 {
+                background-color: rgb(204, 199, 199);
+                
+           }
+           .conteudo2 {
+                background-color: rgb(204, 199, 199);
+                
+           }
+           .card-destaque {
+                background-color: #0e72ec;
+                font-weight: 600;
+                color: #fff;
+                border-radius: 3px;
+           }
+           p a {
+                color: #000000;
+                font-size: 13px;
+           }
+           .card-body p{
+                font-size: 13px;
+           }
+           .capa {
+                text-align: center;
+            }
+            .list {
+                flex-wrap: nowrap;
+                list-style: none;
+                padding: 0;
+            }
+            .list img {
+                width: 40%;
+            }
+            
+            footer {
+                padding: 50px;
+            }
+            footer h6 {
+                color: #919496;
+                font-size: 0.8em;
+                text-transform: uppercase;
+            }
+            footer a {
+                color: white;
+                font-size: 0.8em;
+                
+            }
+            footer a:hover {
+                color: #9bf0e1;
+                font-size: 0.8em;
+                text-decoration: none;
+            }
+            footer ul li a img{
+                float: right;
+                margin: 0 5px;
+            }
+
+            @media (max-width: 767px) {
+                .phone {
+                    display: none;
+                }
+            }
+            @media (max-width: 1200px) {
+                .phone {
+                    display: none;
+                }
+                .lefth {
+                    width: 100%;
+                }
+            }
+            /* X-Small devices (portrait phones, less than 576px)*/
+            @media (max-width: 575.98px) {
+                h1 {
+                    font-size: 2em;
+                }
+                .btn-custom {
+                    margin: 10px 15px;
+                }
+            }
+            /* Small devices (landscape phones, 576px and up)*/
+            @media (min-width: 576px) {
+                h1 {
+                    font-size: 2em;
+                }
+            }
+
+            /* Medium devices (tablets, 768px and up)*/
+            @media (min-width: 768px) {
+                h1 {
+                    font-size: 3em;
+                }
+            }
+
+            /* Large devices (desktops, 992px and up)*/
+            @media (min-width: 992px) {
+                h1 {
+                    font-size: 4em;
+                }
+            }
+
+            /* X-Large devices (large desktops, 1200px and up)*/
+            @media (min-width: 1200px) {
+                h1 {
+                    font-size: 5em;
+                }
+            }
+
+            /* XX-Large devices (larger desktops, 1400px and up)*/
+            @media (min-width: 1400px) {
+                h1 {
+                    font-size: 6em;
+                }
+            }
+            
+            /* scroll bar */
+            /* width */
+            ::-webkit-scrollbar {
+            width: 10px;
+            }
+
+            /* Track */
+            ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            }
+
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+            background: #888;
+            }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="fixed-top">
+            <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #000000ab;">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="spotify.svg" width="132px">
+                    </a>
+                    
+                    <button class="navbar-toggler">
+                        <span class="navbar-toggler-icon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item ms-2">
+                                <a class="nav-link" href="premium.html">Premium</a>
+                            </li>
+                            <li class="nav-item ms-2">
+                                <a class="nav-link" href="ajuda.html">Ajuda</a>
+                            </li>
+                            <li class="nav-item ms-2">
+                                <a class="nav-link" href="baixar.html">Baixar</a>
+                            </li>
+                            <li class="divisor"></li>
+                            <li class="nav-item ms-2">
+                                <a class="nav-link" href="#">Inscrever-se</a>
+                            </li>
+                            <li class="nav-item ms-2">
+                                <a class="nav-link" href="#">Entrar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+        <section id="home" class="d-flex">
+            <div id="carouselControls" class="carousel slide container align-self-center" data-bs-ride="carousel">
+                <div class="col-md-12 capa carousel-item active">
+                    <div class=" d-block w-100" style="padding-top: 100px;">
+                        <h1>Aproveite 1 mês grátis de Premium</h1>
+                        <p class="fs-4 mb-5 text-light">Depois, pague somente R$ 19,90/mês. Cancele quando quiser.</p>
+                        <div class="d-grid gap-2 mx-auto">
+                            <button class="btn btn-lg rounded-pill text-decoration-none btn-custom btn-preto mb-2" href="#">começar</button>
+                            <button class="btn btn-lg rounded-pill text-decoration-none btn-custom btn-branco" href="#">ver planos</button>          
+                        </div>
+                        <h6 class="mt-5 text-light"><a class="text-light" href="#">Sujeito a Termos e Condições.</a> O mês grátis não está disponível para usuários que já experimentaram o Premium.</h6>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </section>
+        
+        <section class="d-flex conteudo1">
+            <div class="container">
+                <div class="row capa">
+                    <div class="col-md-6 mx-auto">
+                        <h2 class="text-dark my-5">Por que ser Premium?</h2>                            
+                    </div>
+                    <div class="col-md-12 mx-auto">
+                        <ul class="list d-flex">
+                            <li>
+                                <div>
+                                    <img src="download-music.png" alt="#">
+                                </div>
+                                <div>
+                                    <p class="fs-5 fw-bold">Modo offline.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="do-what-you-want.png" alt="#">
+                                </div>
+                                <div>
+                                    <p class="fs-5 fw-bold">Ouça o que quiser.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="celular-custom.png" alt="#">
+                                </div>
+                                <div>
+                                    <p class="fs-5 fw-bold">Ouça músicas sem anúncios.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="phone-play.png" alt="#">
+                                </div>
+                                <div>
+                                    <p class="fs-5 fw-bold">Troque de música o quanto quiser.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="d-flex conteudo2">
+            <div class="container col-md-12 my-5">
+                    <div class="col-md-6 mx-auto my-5">
+                        <h1 class="text-dark ps-5 mx-auto">Escolha seu plano Premium</h1>
+                        <p class="ps-4">Ouça sem limites no seu celular, alto-falante e em outros dispositivos.</p>
+                    </div>                
+                <div class="row my-5">
+                    <div class="card-group">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <button class="btn btn-primary disabled" type="button">3 meses grátis com a assinatura</button>
+                                
+                                <h3 class="card-title">Individual</h3>
+                                <p class="card-text">R$ 19,90/mês após o período da oferta</p>
+                                <p class="card-text">1 conta</p>                             
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Ouça músicas sem anúncios</li>
+                                <li class="list-group-item">Ouça em qualquer lugar — até no modo offline</li>
+                                <li class="list-group-item">Escolha a música que quer ouvir</li>
+                                <li class="list-group-item">Faça um plano pré-pago ou uma assinatura</li>
+                            </ul>
+                            <div class="card-body mx-auto">
+                                <button class="btn btn-dark btn-md rounded-pill">começar</button>
+                            </div>
+                            <div class="card-body">
+                                <p>Somente no plano Individual. Depois, é só R$ 19,90/mês.<a href=""> Sujeito a Termos e Condições.</a> Disponível apenas para quem nunca usou o Premium. Oferta válida até 11 de setembro de 2022.</p>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <button class="btn btn-primary disabled" type="button">3 meses grátis com a assinatura</button>
+                                
+                                <h3 class="card-title">Individual</h3>
+                                <p class="card-text">R$ 19,90/mês após o período da oferta</p>
+                                <p class="card-text">1 conta</p>                             
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Ouça músicas sem anúncios</li>
+                                <li class="list-group-item">Ouça em qualquer lugar — até no modo offline</li>
+                                <li class="list-group-item">Escolha a música que quer ouvir</li>
+                                <li class="list-group-item">Faça um plano pré-pago ou uma assinatura</li>
+                            </ul>
+                            <div class="card-body mx-auto">
+                                <button class="btn btn-dark btn-md rounded-pill">começar</button>
+                            </div>
+                            <div class="card-body">
+                                <p>Somente no plano Individual. Depois, é só R$ 19,90/mês.<a href=""> Sujeito a Termos e Condições.</a> Disponível apenas para quem nunca usou o Premium. Oferta válida até 11 de setembro de 2022.</p>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <button class="btn btn-primary disabled" type="button">3 meses grátis com a assinatura</button>
+                                
+                                <h3 class="card-title">Individual</h3>
+                                <p class="card-text">R$ 19,90/mês após o período da oferta</p>
+                                <p class="card-text">1 conta</p>                             
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Ouça músicas sem anúncios</li>
+                                <li class="list-group-item">Ouça em qualquer lugar — até no modo offline</li>
+                                <li class="list-group-item">Escolha a música que quer ouvir</li>
+                                <li class="list-group-item">Faça um plano pré-pago ou uma assinatura</li>
+                            </ul>
+                            <div class="card-body mx-auto">
+                                <button class="btn btn-dark btn-md rounded-pill">começar</button>
+                            </div>
+                            <div class="card-body">
+                                <p>Somente no plano Individual. Depois, é só R$ 19,90/mês.<a href=""> Sujeito a Termos e Condições.</a> Disponível apenas para quem nunca usou o Premium. Oferta válida até 11 de setembro de 2022.</p>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <button class="btn btn-primary disabled" type="button">3 meses grátis com a assinatura</button>
+                                
+                                <h3 class="card-title">Individual</h3>
+                                <p class="card-text">R$ 19,90/mês após o período da oferta</p>
+                                <p class="card-text">1 conta</p>                             
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Ouça músicas sem anúncios</li>
+                                <li class="list-group-item">Ouça em qualquer lugar — até no modo offline</li>
+                                <li class="list-group-item">Escolha a música que quer ouvir</li>
+                                <li class="list-group-item">Faça um plano pré-pago ou uma assinatura</li>
+                            </ul>
+                            <div class="card-body mx-auto">
+                                <button class="btn btn-dark btn-md rounded-pill">começar</button>
+                            </div>
+                            <div class="card-body">
+                                <p>Somente no plano Individual. Depois, é só R$ 19,90/mês.<a href=""> Sujeito a Termos e Condições.</a> Disponível apenas para quem nunca usou o Premium. Oferta válida até 11 de setembro de 2022.</p>
+                            </div>
+
+                    </div>
+                    </div>
+                </div>                
+            </div>
+        </section>
+        
+        <footer class="d-flex bg-black">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <a href="#">
+                            <img src="spotify.svg" width="132px">
+                        </a>
+                    </div>
+                    <div class="col-md-2">
+                        <h6>company</h6>
+                        <ul>
+                            <li><a href="#">Sobre</a></li>
+                            <li><a href="#">Empregos</a></li>
+                            <li><a href="#">Impresa</a></li>
+                            <li><a href="#">Novidades</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h6>comunidades</h6>
+                        <ul>
+                            <li><a href="#">Artistas</a></li>
+                            <li><a href="#">Desenvolvimento</a></li>
+                            <li><a href="#">Marcas</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h6>links uteis</h6>
+                        <ul>
+                            <li><a href="#">Ajuda</a></li>
+                            <li><a href="#">Presentes</a></li>
+                            <li><a href="#">Player da web</a></li>
+                        </ul>
+                    </div>
+                        
+                    <div class="col-md-4">
+                        <ul>
+                            <li>
+                                <a href="#"><img src="instagram.png"></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="twitter.png"></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="facebook.png"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+<title>portifolio</title>
+
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background: url(division.png)no-repeat;
+        background-size: cover;
+        position: relative;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		background-attachment: fixed; 
+    }
+    .foto-perfil {
+        width: 50px;
+        height: 50px;
+        border: 2px solid #E67E22;
+        border-radius: 50px;
+        text-align: center;
+        
+    }
+    .logo {
+        color: #E67E22;
+        font-size: 20px;
+        width: fit-content;
+    }
+    .nav2 a {
+        color: #dc3545;
+        text-decoration: none;
+        margin-left: 20px;
+    }
+    .nav2 a:hover{
+        border-bottom: 3px solid#dc3545;
+        border-radius: 5px;
+    }
+    ul img {
+        padding: 0 2px;
+    }
+    ul {
+        list-style: none;
+    }
+    nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .telefone {
+        color: #dc3545;
+        font-size: x-large;
+        margin-left: 30px;
+        margin-bottom: 0px;
+    }
+
+    .status {
+        width: fit-content;
+        color: #fff;
+        font-size: large;
+        text-align: start;
+        margin: 0 auto;
+    }
+    .status .status-content {
+            border: 2px solid rgb(70, 68, 68);
+            border-radius: 3px;
+            background-position: 0% 0%;
+            position: relative;
+            width: 100%;
+            height: 50px;
+        }
+        .status .status-content:before {
+            content: "";
+            background: linear-gradient(
+                90deg,
+                transparent 0% 33%,
+                #ce9c1171 66%, 
+                #ce821179 83.5%, 
+                #ce66117e 100%
+            );
+            background-position: 0% 0%;
+            position: absolute;
+            background-size: 300% 300%;
+            pointer-events: none;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+            transition: background-position 350ms ease;
+            width: 100%;
+            z-index: 1;
+        }
+        .status .status-content:hover::before {
+            background-position: 100% 100%;
+            
+        }
+        .status .status-content{
+            background: radial-gradient(
+                rgba(255, 255, 255, 0.2) 8%, 
+                transparent 8%
+            );
+            background-position: 0% 0%;
+            background-size: 2vmin 2vmin;
+            height: 100%;
+            position: relative;
+            padding: 9px 9px 0 9px;
+            transition: background-position 350ms ease;
+            width: 100%;
+        }
+        .status:hover > .status p {
+            background-position: -10% 0%;
+            
+        }
+    .status span {
+        color: #E67E22;
+    }
+    .btn-close-custom {
+        color: #fff;
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+    .btn-close {
+        color: #fff;
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+    #container {
+        width: 100%;
+        height: 100%;
+    }
+    h2 {
+        margin: 0 auto;
+        width: fit-content;
+        color: #ffffff;
+    }
+    article {
+		text-align: justify;
+		padding: 50px 80px;
+    }
+    .fundo-transparente {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: none;
+    }
+    .fundo-escuro {
+        background-color: rgb(0, 0, 0);
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+        box-shadow: 0px 4px 12px 12px rgba(0, 0, 0, 0.6);
+    }
+    .fundo-claro {
+        background-color: #fff;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .fundo-claro h2 {
+        color: black;
+    }
+    .fundo-claro .skills {
+        display: flex;
+        width: fit-content;
+        margin: 0 auto;
+        flex-direction: row;
+    }
+    .skills li {
+        margin: 40px;
+    }
+    /*#carouselExampleIndicators {
+        height: 500px;
+    }*/
+    
+</style>
+
+</head>
+<body>
+    <nav class="navbar navbar-dark " style="background-color: rgba(0, 0, 0, 0.6); box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.6);">
+        <div class="container-fluid">
+            <div class="col-md-4">
+                <ul>
+                    <li>
+                        <a href="#"><img src="imagens/instagram.png"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="imagens/twitter.png"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="imagens/facebook.png"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul>
+                    <li>
+                        <a href="#"><img src="imagens/telefoneBranco.png" width="54px" height="54px"></a>
+                    </li>
+                    <li>
+                        <p style="display: none;">telefone de contato</p>
+                    </li>
+                    <li>
+                        <p class="telefone">99 99999-9999</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="col-md-4">
+                <ul class="nav2" style="display: flex; flex-direction: row; list-style: none;">
+                    <li>
+                        <a href="#">home</a>
+                    </li>
+                    <li>
+                        <a href="#">quem sou</a>
+                    </li>
+                    <li>
+                        <a href="#">o que faço</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="logo col-md-4">
+                <h1>zero-meia</h1>
+            </div>
+            <div class="col-md-4">
+                <ul class="nav2" style="display: flex; flex-direction: row; list-style: none;">
+                    <li>
+                        <a href="#">Portifólio</a>
+                    </li>
+                    <li>
+                        <a href="#">projetos</a>
+                    </li>
+                    <li>
+                        <a href="#">fale conosco</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="container">
+        <article class="fundo-transparente">
+            <h2>bem vindo</h2>
+        </article>
+        <article class="fundo-escuro">
+            <h2>Quem eu sou</h2>
+            <img style="position: absolute; margin-left: 3%; width: 405px;" src="imagens\minhaFoto.jpg">
+            <img style="position: relative; width: 500px; margin: 0 auto;" src="imagens\fotoPerfil1.png">
+            <div class="status">
+                <div class="status-content">
+                    <p><span>NOME:</span> Pablo de Almeida dos Santos</p>
+                    <p><span>IDADE:</span> 19</p>
+                    <p><span>IDIOMAS:</span> Português/Ingles</p>
+                    <p><span>NACIONALIDADE:</span> Brasileiro</p>
+                </div>
+                
+            </div>
+        </article>
+        <article class="fundo-claro">
+            <h2>Minhas abilidades</h2>
+
+            <ul class="skills">
+                <li>
+                    java script
+                </li>
+                <li>
+                    html
+                </li>
+                <li>
+                    CSS
+                </li>
+                <li>
+                    photoshop
+                </li>
+                <li>
+                    bootstrap
+                </li>
+            </ul>
+        </article>
+    </main>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+</body>
+</html>

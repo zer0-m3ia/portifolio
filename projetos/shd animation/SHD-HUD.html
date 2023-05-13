@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interface shd</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: rgb(49, 42, 42);
+        }
+
+        .menu {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            border: solid rgba(114, 114, 114, 0.658) 2px;
+        }
+        li {
+            position: relative;
+            list-style: none;
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 40%;
+            opacity: 100%;
+            border: solid rgba(114, 114, 114, 0.658) 1px;
+            inset: 4px;
+        }
+        li::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 48px;
+            background:  url(shd-bg-30.png)repeat;
+            transform-origin: bottom;
+            opacity: 60%;
+            transition: 0.2s;
+        }
+        li:hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background:  url(shd-bg-30.png)repeat;
+            transform-origin: bottom;
+            opacity: 100%;
+            transition: 0.2s;
+        }
+        li:hover::after {
+            background: linear-gradient(50deg,#f89626,#b86e29);
+        }
+        li:hover {
+            border: solid rgba(114, 114, 114, 0.658) 1px;
+            padding: 7px;
+            /*background: url(shd-bg-30.png)repeat
+                        linear-gradient(50deg,#f89626,#b86e29)*/;
+            transform: skewx(2deg);
+            transform: skewx(4deg);
+            opacity: 80%;
+            width: 45%;
+            height: 30px;
+        }
+        a {
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            text-decoration: none;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            text-shadow: -5px 4px #e0e0e06b;
+            letter-spacing: 2px;
+        }
+
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li id="i1">
+            <a href="#">Crafting</a>
+        </li>
+        <li id="i2">
+            <a href="#">Social</a>
+        </li>
+        <li id="i3">
+            <a href="#">Skills</a>
+        </li>
+        <li id="i4">
+            <a href="#">Inventory</a>
+        </li>
+        <li id="i5">
+           <a href="#">Options</a>
+        </li>
+        <li id="i6">
+            <a href="#">Help</a>
+        </li>
+    </ul>
+    
+</body>
+</html>

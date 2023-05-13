@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>spotify copy</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <style>
+            .conteudo1 {
+                background-color: rgb(235, 224, 224);
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+            .conteudo2 {
+                background-color: rgb(27, 26, 26);
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+            html, body {
+                height: 100%;
+                overflow-x: hidden;
+            }
+            #home {
+                background-color: #19e68c;
+
+            }
+            body {
+                background:
+                            linear-gradient(to bottom,#148b3e,#242925,#201e1e ,#131212);
+            }
+            .nav-link:hover {
+                color: #26f877;
+            }
+            .nav-link {
+                color: #fff;
+            }            
+            .albuns {
+                padding: 10px 0;
+            }
+            .divisor {
+                width: 1px;
+                background: #fff;
+                margin: 12px 15px;
+            }
+            h1 {
+                color: #a7a7a7;
+            }
+            h2 {
+                font-weight: 700;
+                font-size: 4em;
+                letter-spacing: -0.04em;
+                color: #000000;
+            }
+            .conteudo2 h2 {
+                font-weight: 700;
+                font-size: 3em;
+                letter-spacing: -0.04em;
+                color: #ffffff;                
+            }
+            h3 {
+                font-weight: 700;
+                font-size: 2em;
+                letter-spacing: -0.04em;
+                color: #17c400;
+           }
+           h6 {
+            padding: 0px 0px 32px;
+           }
+            p {
+                font-weight: 500;
+            }
+            .capa {
+                text-align: center;
+            }
+            
+            
+            footer {
+                padding: 50px;
+            }
+            footer h6 {
+                color: #919496;
+                font-size: 0.8em;
+                text-transform: uppercase;
+            }
+            ul {
+                display: inline;
+                list-style: none;
+                padding: 0px;
+            }
+            li img {
+                width: 15%;
+                margin: 0px 50px 50px;
+            }
+            section li {
+                padding: 20px 0px;
+            }
+            a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 1.125rem;
+            }
+            a:hover {
+                color: #fff;
+                text-decoration: underline;
+            }
+            footer a {
+                color: white;
+                font-size: 0.8em;
+                
+            }
+            footer a:hover {
+                color: #9bf0e1;
+                font-size: 0.8em;
+                text-decoration: none;
+            }
+            footer ul li a img{
+                float: right;
+                margin: 0 5px;
+            }
+            .btn-custom {
+                color: white;
+                border-radius: 500px;
+                -moz-border-radius: 500px;
+                -webkit-border-radius: 500px;
+                text-transform: uppercase;
+                transition: background 0.4s, color 0.4;
+                padding: 10px 15px;
+            }
+            .btn-verde {
+                background-color: #30b91e;
+                border:2px solid #30b91e;
+            }
+            .btn-verde:hover {
+                border:2px solid white;
+                color: white;
+                background-color: #30b91e;
+            }
+            .btn-branco {
+                background-color: white;
+                border:2px solid white;
+            }
+            .btn-branco:hover {
+                border: 2px solid white;
+                color: black;
+                background-color: white;
+            }
+            .list .list-box{
+                display: inline-block;
+                list-style: none;
+                font-size: 1.125rem;
+                font-weight: 700;
+            }
+            .item {
+                padding-top: 16px;
+            }
+            
+        
+            @media (max-width: 767px) {
+                .phone {
+                    display: none;
+                }
+            }
+            @media (max-width: 1200px) {
+                .phone {
+                    display: none;
+                }
+                .lefth {
+                    width: 100%;
+                }
+            }
+            /* X-Small devices (portrait phones, less than 576px)*/
+            @media (max-width: 575.98px) {
+                h1 {
+                    font-size: 2em;
+                }
+                .btn-custom {
+                    margin: 10px 15px;
+                }
+            }
+            /* Small devices (landscape phones, 576px and up)*/
+            @media (min-width: 576px) {
+                h1 {
+                    font-size: 3em;
+                }
+            }
+
+            /* Medium devices (tablets, 768px and up)*/
+            @media (min-width: 768px) {
+                h1 {
+                    font-size: 4em;
+                }
+            }
+
+            /* Large devices (desktops, 992px and up)*/
+            @media (min-width: 992px) {
+                h1 {
+                    font-size: 5em;
+                }
+            }
+
+            /* X-Large devices (large desktops, 1200px and up)*/
+            @media (min-width: 1200px) {
+                h1 {
+                    font-size: 6em;
+                }
+            }
+
+            /* XX-Large devices (larger desktops, 1400px and up)*/
+            @media (min-width: 1400px) {
+                h1 {
+                    font-size: 7em;
+                }
+            }
+            
+            /* scroll bar */
+            /* width */
+            ::-webkit-scrollbar {
+            width: 10px;
+            }
+
+            /* Track */
+            ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            }
+
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+            background: #888;
+            }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-light" style="background-color: black;">
+                <div class="container" >
+                    <a class="navbar-brand" href="index.html">
+                        <img src="spotify.svg" width="132px">
+                    </a>
+                    
+                    <button class="navbar-toggler">
+                        <span class="navbar-toggler-icon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item ms-2">
+                                <a class="nav-link" href="premium.html">Premium</a>
+                            </li>
+                            <li class="nav-item ms-2">
+                                <a class="nav-link" href="ajuda.html">Ajuda</a>
+                            </li>
+                            <li class="nav-item ms-2">
+                                <a class="nav-link" href="#">Baixar</a>
+                            </li>
+                            <li class="divisor"></li>
+                            <li class="nav-item ms-2">
+                                <a class="nav-link" href="#">Inscrever-se</a>
+                            </li>
+                            <li class="nav-item ms-2">
+                                <a class="nav-link" href="#">Entrar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section id="home" class="d-flex">
+                <div class="col-md-12 mx-auto text-center p-5">
+                    <div>
+                        <img src="notebook-teste2.png" width="10%">
+                    </div>
+                    <div class="col-md-6 w-100 pb-4">
+                        <h2>Baixe o Spotify</h2>
+                    </div>
+
+                    <div class="col-md-6 d-flex w-100 pb-3 mb-4">
+                        <p class="text-dark w-100" style="font-size: 1.2rem; font-weight: 700;">Escolha milhões de músicas e podcasts no seu dispositivo.</p>
+                    </div>
+
+                    <div class="d-flex mx-auto">
+                        <button class="btn btn-sm rounded-pill text-decoration-none text-dark btn-custom btn-branco mx-auto" style="font-weight: 700;">Baixar</button>
+                    </div>
+                                      
+                </div>
+        </section>
+
+        <section class="d-flex conteudo1">
+            <div class="container aling-self-center">
+                <div class="col-md-12 mx-auto text-center p-5">
+                    <div class="col-md-6 w-100 pb-4">
+                        <h2>Curta as suas músicas também no seu celular ou tablet.</h2>
+                    </div>
+
+                    <div class="col-md-6 d-flex w-100 pb-3 mb-4">
+                        <p class="text-dark w-100" style="font-size: 1.2rem; font-weight: 700;">Ouvir música no celular ou tablet é fácil, divertido e grátis.</p>
+                    </div>
+
+                    <div class="col-md-12 mx-auto">
+                        <img src="badge-app-store.svg" alt="">
+                        <img src="badge-google-play-pt.svg" height="57px" style="margin: -8px;" alt="">
+                        <img src="badge-microsoft.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="d-flex conteudo2">
+            <div class="container aling-self-center">
+                <div class="col-md-12 mx-auto text-center p-5">
+                    <div class="col-md-12 mx-auto">
+                        <img src="conjuntos-de-dispositivos.png">
+                    </div>
+                    <div class="col-md-6 w-100 pb-4">
+                        <h2>Uma só conta para curtir a música em qualquer dispositivo.</h2>
+                    </div>
+
+                    <div class="col-md-12">
+                        <ul class="list">
+                            <li class="item">
+                                <a class="list-box" href="#">celular</a>
+                            </li>
+                            <li class="item">
+                                <a class="list-box" href="#">computador</a>
+                            </li>
+                            <li class="item">
+                                <a class="list-box" href="#">tablet</a>
+                            </li>
+                            <li class="item">
+                                <a class="list-box" href="#">carro</a>
+                            </li>
+                            <li class="item">
+                                <a class="list-box" href="#">playstation</a>
+                            </li>
+                            <li class="item">
+                                <a class="list-box" href="#">xbox</a>
+                            </li>
+                            <li class="item">
+                                <a class="list-box" href="#">tv</a>
+                            </li>
+                            <li class="item">
+                                <a class="list-box" href="#">alto-falante</a>
+                            </li>
+                            <li class="item">
+                                <a class="list-box" href="#">web player</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </section>
+        
+        <footer class="d-flex bg-black">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <a href="#">
+                            <img src="spotify.svg" width="132px">
+                        </a>
+                    </div>
+                    <div class="col-md-2">
+                        <h6>company</h6>
+                        <ul>
+                            <li><a href="#">Sobre</a></li>
+                            <li><a href="#">Empregos</a></li>
+                            <li><a href="#">Impresa</a></li>
+                            <li><a href="#">Novidades</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h6>comunidades</h6>
+                        <ul>
+                            <li><a href="#">Artistas</a></li>
+                            <li><a href="#">Desenvolvimento</a></li>
+                            <li><a href="#">Marcas</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h6>links uteis</h6>
+                        <ul>
+                            <li><a href="#">Ajuda</a></li>
+                            <li><a href="#">Presentes</a></li>
+                            <li><a href="#">Player da web</a></li>
+                        </ul>
+                    </div>
+                        
+                    <div class="col-md-4">
+                        <ul>
+                            <li>
+                                <a href="#"><img src="instagram.png"></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="twitter.png"></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="facebook.png"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+   </body>
+</html>

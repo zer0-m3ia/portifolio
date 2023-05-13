@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Parallax</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" media="(max-width: 800px)" href="example.css" />
+	
+	<style type="text/css">
+		
+		/* Configuração padrão da página
+		-------------------------------*/
+		body, html {
+			margin: 0;
+			font: 16px "Lato", sans-serif;
+			color: #777;
+			height: 100%;
+		}
+
+		.conteudo {
+			color: #777;
+			background-color: white;
+			text-align: justify;
+			padding: 50px 80px;
+		}
+
+		.double-icons {
+			margin: auto;
+			text-align: center;
+		}
+		h3 {
+			text-transform: uppercase;
+			color: #111;
+			text-align: center;
+		}
+
+		p{
+			margin-bottom: 20px;
+		}
+
+		/* Efeito Parallax
+		-------------------------------*/
+		.caixa1, .caixa2, .caixa3, .caixa4 {
+			position: relative;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			background-attachment: fixed; 
+		}
+
+		.caixa1 {
+			background-image: url(902344.jpg);
+		}
+
+		.caixa2 {
+			background-image: url(cropped-1920-1080-737929.jpg);
+		}
+
+		.caixa3 {
+			background-image: url(1068672.png);
+		}
+
+		.caixa4 {
+			background-image: url(676538.jpg);
+		}
+
+		.conteudo-titulo {
+			position: absolute;
+			left: 0;
+			top: 45%;
+			width: 100%;
+			text-align: center;
+		}
+
+		.conteudo-titulo span.titulo {
+			color: #fff;
+			background-color: #111;
+			padding: 18px;
+			font-size: 25px;
+			letter-spacing: 5px;
+			text-transform: uppercase;
+		}
+		
+
+	</style>
+
+</head>
+<body>
+
+	<div class="caixa1">
+		<div class="conteudo-titulo">
+			<span class="titulo">welcome</span>
+		</div>
+		<div style="position: absolute; bottom: 0; left: 0; text-align: center; width: 100%;">
+			<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+			<path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+			<path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+			</svg>
+		</div>
+	</div>
+
+	<div class="conteudo">
+		<h3>Parallax</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consectetur cursus purus eu semper. Quisque viverra sollicitudin tristique. Fusce eget ligula felis. Integer imperdiet, diam vitae mollis commodo, odio mauris imperdiet ante, sed tristique dolor tellus id arcu. Aenean commodo diam id nunc scelerisque, tempor accumsan dolor facilisis. Aliquam nec sapien at ipsum sollicitudin iaculis a at quam. Suspendisse laoreet ligula vel dui porta ullamcorper. Phasellus ultrices sit amet ligula ac lacinia. Aliquam pellentesque leo cursus quam sodales mattis. Aenean nec dignissim elit.</p>
+		
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consectetur cursus purus eu semper. Quisque viverra sollicitudin tristique. Fusce eget ligula felis. Integer imperdiet, diam vitae mollis commodo, odio mauris imperdiet ante, sed tristique dolor tellus id arcu. Aenean commodo diam id nunc scelerisque, tempor accumsan dolor facilisis. Aliquam nec sapien at ipsum sollicitudin iaculis a at quam. Suspendisse laoreet ligula vel dui porta ullamcorper. Phasellus ultrices sit amet ligula ac lacinia. Aliquam pellentesque leo cursus quam sodales mattis. Aenean nec dignissim elit.</p>
+	</div>
+
+	<div class="caixa2">
+		<div class="conteudo-titulo">
+			<span class="titulo">shd logo</span>
+		</div>
+		<div style="position: absolute; bottom: 0; left: 0; text-align: center; width: 100%;">
+			<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+			<path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+			<path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+			</svg>
+		</div>
+	</div>
+
+	<div class="conteudo">
+		<h3>Parallax</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consectetur cursus purus eu semper. Quisque viverra sollicitudin tristique. Fusce eget ligula felis. Integer imperdiet, diam vitae mollis commodo, odio mauris imperdiet ante, sed tristique dolor tellus id arcu. Aenean commodo diam id nunc scelerisque, tempor accumsan dolor facilisis. Aliquam nec sapien at ipsum sollicitudin iaculis a at quam. Suspendisse laoreet ligula vel dui porta ullamcorper. Phasellus ultrices sit amet ligula ac lacinia. Aliquam pellentesque leo cursus quam sodales mattis. Aenean nec dignissim elit.</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consectetur cursus purus eu semper. Quisque viverra sollicitudin tristique. Fusce eget ligula felis. Integer imperdiet, diam vitae mollis commodo, odio mauris imperdiet ante, sed tristique dolor tellus id arcu. Aenean commodo diam id nunc scelerisque, tempor accumsan dolor facilisis. Aliquam nec sapien at ipsum sollicitudin iaculis a at quam. Suspendisse laoreet ligula vel dui porta ullamcorper. Phasellus ultrices sit amet ligula ac lacinia. Aliquam pellentesque leo cursus quam sodales mattis. Aenean nec dignissim elit.</p>
+	</div>
+
+	<div class="caixa3">
+		<div class="conteudo-titulo">
+			<span class="titulo">system corrupted</span>
+		</div>
+		<div style="position: absolute; bottom: 0; left: 0; text-align: center; width: 100%;">
+			<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+			<path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+			<path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+			</svg>
+		</div>
+	</div>
+
+	<div class="conteudo">
+		<h3>Parallax</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consectetur cursus purus eu semper. Quisque viverra sollicitudin tristique. Fusce eget ligula felis. Integer imperdiet, diam vitae mollis commodo, odio mauris imperdiet ante, sed tristique dolor tellus id arcu. Aenean commodo diam id nunc scelerisque, tempor accumsan dolor facilisis. Aliquam nec sapien at ipsum sollicitudin iaculis a at quam. Suspendisse laoreet ligula vel dui porta ullamcorper. Phasellus ultrices sit amet ligula ac lacinia. Aliquam pellentesque leo cursus quam sodales mattis. Aenean nec dignissim elit.</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consectetur cursus purus eu semper. Quisque viverra sollicitudin tristique. Fusce eget ligula felis. Integer imperdiet, diam vitae mollis commodo, odio mauris imperdiet ante, sed tristique dolor tellus id arcu. Aenean commodo diam id nunc scelerisque, tempor accumsan dolor facilisis. Aliquam nec sapien at ipsum sollicitudin iaculis a at quam. Suspendisse laoreet ligula vel dui porta ullamcorper. Phasellus ultrices sit amet ligula ac lacinia. Aliquam pellentesque leo cursus quam sodales mattis. Aenean nec dignissim elit.</p>
+	</div>
+
+	<div class="caixa4">
+		<div class="conteudo-titulo">
+			<span class="titulo">get ready to fight</span>
+		</div>
+	</div>
+
+</body>
+</html>

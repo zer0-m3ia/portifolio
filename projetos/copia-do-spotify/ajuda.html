@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>spotify copy</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <style>
+            /*------- inicio base -------*/
+            .conteudo1 {
+                background-color: rgb(58, 55, 55);
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+            .conteudo2 {
+                background-color: rgb(27, 26, 26);
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+            html, body {
+                height: 100%;
+                overflow-x: hidden;
+            }
+            #home {
+                background:linear-gradient(to bottom,#148b3e,#242925,#201e1e ,#131212);
+
+            }
+            body {
+                background:
+                            linear-gradient(to bottom,#148b3e,#242925,#201e1e ,#131212);
+            }
+            /*------- fim base -------*/
+
+            /*------- inicio barra de navegação -------*/
+            .nav-link:hover {
+                color: #26f877;
+            }
+            .nav-link {
+                color: #fff;
+            }            
+            .albuns {
+                padding: 10px 0;
+            }
+            .divisor {
+                width: 1px;
+                background: #fff;
+                margin: 12px 15px;
+            }
+            h1 {
+                color: #a7a7a7;
+            }
+            h2 {
+                font-weight: 700;
+                font-size: 4em;
+                letter-spacing: -0.04em;
+                color: #ffffff;
+            }
+            /*------- fim barra de navegação -------*/
+            
+            .conteudo2 h2 {
+                font-weight: 700;
+                font-size: 3em;
+                letter-spacing: -0.04em;
+                color: #ffffff;                
+            }
+            h3 {
+                font-weight: 700;
+                font-size: 2em;
+                letter-spacing: -0.04em;
+                color: #17c400;
+           }
+           h6 {
+            padding: 0px 0px 32px;
+           }
+            p {
+                font-weight: 500;
+            }
+            .capa {
+                text-align: center;
+            }
+            section li {
+                padding: 20px 0px;
+            }
+            /*------ inicio footer ------*/
+            footer {
+                padding: 50px;
+            }
+            footer h6 {
+                color: #919496;
+                font-size: 0.8em;
+                text-transform: uppercase;
+            }
+            ul {
+                list-style: none;
+                padding: 0px;
+            }
+            footer li img {
+                width: 15%;
+                margin: 0px 50px 50px;
+            }
+            
+            a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 1.125rem;
+            }
+            a:hover {
+                color: #fff;
+                text-decoration: underline;
+            }
+            footer a {
+                color: white;
+                font-size: 0.8em;
+                
+            }
+            footer a:hover {
+                color: #9bf0e1;
+                font-size: 0.8em;
+                text-decoration: none;
+            }
+            footer ul li a img{
+                float: right;
+                margin: 0 5px;
+            }
+            /*------ final footer ------*/
+            .btn-custom {
+                color: white;
+                border-radius: 500px;
+                -moz-border-radius: 500px;
+                -webkit-border-radius: 500px;
+                text-transform: uppercase;
+                transition: background 0.4s, color 0.4;
+                padding: 10px 15px;
+            }
+            .btn-verde {
+                background-color: #30b91e;
+                border:2px solid #30b91e;
+            }
+            .btn-verde:hover {
+                border:2px solid white;
+                color: white;
+                background-color: #30b91e;
+            }
+            .btn-branco {
+                border:2px solid white;
+            }
+            .btn-branco:hover {
+                border: 2px solid white;
+                color: black;
+                background-color: white;
+            }
+            .list-img {
+            height: 64px;
+            position: absolute;
+            top: 25px;
+            box-shadow: rgba(0, 0, 0, 0.295) 0px 2px 4px 0px;
+            right: calc(100% - 64px + 19px);
+            left: calc(100% - 64px + 19px);
+            transform: rotate(25deg);
+        }
+        .list-text {
+            display: grid;
+            font-size: 1.125rem;
+            font-weight: 700;
+        }
+        
+        .list-box {
+            height: 92px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+        .list-item {
+            padding: 12px 54px 12px 12px;
+        }
+        .painel-ajuda {
+            padding-top: 16px;
+            height: auto;
+            width: 100%;
+            margin-bottom: 56px;
+            gap: 16px;
+            grid-template-areas: 
+            "item item item"
+            "item item item";
+        }
+        .item {
+            min-width: 170px;
+        }
+        
+            @media (max-width: 767px) {
+                .phone {
+                    display: none;
+                }
+            }
+            @media (max-width: 1200px) {
+                .phone {
+                    display: none;
+                }
+                .lefth {
+                    width: 100%;
+                }
+            }
+            /* X-Small devices (portrait phones, less than 576px)*/
+            @media (max-width: 575.98px) {
+                h1 {
+                    font-size: 2em;
+                }
+                .btn-custom {
+                    margin: 10px 15px;
+                }
+            }
+            /* Small devices (landscape phones, 576px and up)*/
+            @media (min-width: 576px) {
+                h1 {
+                    font-size: 3em;
+                }
+            }
+
+            /* Medium devices (tablets, 768px and up)*/
+            @media (min-width: 768px) {
+                h1 {
+                    font-size: 4em;
+                }
+            }
+
+            /* Large devices (desktops, 992px and up)*/
+            @media (min-width: 992px) {
+                h1 {
+                    font-size: 5em;
+                }
+            }
+
+            /* X-Large devices (large desktops, 1200px and up)*/
+            @media (min-width: 1200px) {
+                h1 {
+                    font-size: 6em;
+                }
+            }
+
+            /* XX-Large devices (larger desktops, 1400px and up)*/
+            @media (min-width: 1400px) {
+                h1 {
+                    font-size: 7em;
+                }
+            }
+            
+            /* scroll bar */
+            /* width */
+            ::-webkit-scrollbar {
+            width: 10px;
+            }
+
+            /* Track */
+            ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            }
+
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+            background: #888;
+            }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="">
+            <nav class="navbar navbar-expand-sm navbar-light" style="background-color: none;">
+                <div class="container" >
+                    <a class="navbar-brand" href="index.html">
+                        <img src="spotify.svg" width="132px">
+                    </a>
+                    
+                    <button class="navbar-toggler">
+                        <span class="navbar-toggler-icon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item ms-2">
+                                <a class="nav-link" href="premium.html">Premium</a>
+                            </li>
+                            <li class="nav-item ms-2">
+                                <a class="nav-link" href="ajuda.html">Ajuda</a>
+                            </li>
+                            <li class="nav-item ms-2">
+                                <a class="nav-link" href="baixar.html">Baixar</a>
+                            </li>
+                            <li class="divisor"></li>
+                            <li class="nav-item ms-2">
+                                <a class="nav-link" href="#">Inscrever-se</a>
+                            </li>
+                            <li class="nav-item ms-2">
+                                <a class="nav-link" href="#">Entrar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section id="home" class="d-flex">
+                <div class="col-md-6 mx-auto">
+                    <div class="col-md-6 w-100 pb-5">
+                        <h1 class="fs-5">ATENDIMENTO DO SPOTIFY</h1>
+                        <h2>Como podemos ajudar?</h2>
+                    </div>
+
+                    <div class="col-md-6 d-flex w-100">
+                        <div class="me-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-person-circle text-light" viewBox="0 0 20 20">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                            </svg>
+                        </div>
+                        <span class="text-light">
+                            <span style="font-size: 1.5rem; font-weight: 700;">Sejá bem vindo</span>
+                        </span> 
+                    </div>
+
+                    <form class="col-md-6 d-flex w-100 pt-2 pb-2">
+                        <div class="inputConteiner">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 24 24">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg>
+                        </div>
+                        <input type="search" placeholder="Buscar" class="form-control">
+                    </form>
+
+                    <div class="col-md-6 d-grid painel-ajuda">
+                        <div class="item">
+                            <a href="#" role="listitem">
+                                <div class="list-box" style="background-color: rgb(153, 51, 127);">
+                                    <img class="list-img" src="pagamento.png">
+                                    <div class="list-item">
+                                        <p class="list-text">Ajuda com pagamentos</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="item">
+                            <a href="#" role="listitem">
+                                <div class="list-box" style="background-color: rgb(133, 9, 9);">
+                                    <img class="list-img" src="plano.png">
+                                    <div class="list-item">
+                                        <p class="list-text">Ajuda com plano</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+            
+                        <div class="item">
+                            <a href="#" role="listitem">
+                                <div class="list-box" style="background-color: rgb(177, 97, 22);">
+                                    <img class="list-img" src="app.png">
+                                    <div class="list-item">
+                                        <p class="list-text">Ajuda com app</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+            
+                        <div class="item">
+                            <a href="#" role="listitem">
+                                <div class="list-box" style="background-color: rgb(14, 63, 51);">
+                                    <img class="list-img" src="dispositivos.png">
+                                    <div class="list-item">
+                                        <p class="list-text">Ajuda com dispositivos</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+            
+                        <div class="item">
+                            <a href="#" role="listitem">
+                                <div class="list-box"  style="background-color: rgb(87, 80, 80);">
+                                    <img class="list-img" src="seguranças.png">
+                                    <div class="list-item">
+                                        <p class="list-text">Ajuda com Segurança</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+            
+                        <div class="item">
+                            <a href="#" role="listitem">
+                                <div class="list-box" style="background-color: rgb(26, 121, 145);">
+                                    <img class="list-img" src="conta.png">
+                                    <div class="list-item">
+                                        <p class="list-text">Ajuda com conta</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>                   
+                </div>
+        </section>
+
+        <section class="d-flex conteudo1">
+            <div class="container aling-self-center">
+                <div class="row">
+                    <div class="col-md-6 mx-auto">
+                        <h6 class="text-light fs-4">Ajuda rápida</h6>
+                        <ul class="text-light" style="list-style: none;">
+                            <li>
+                                <a href="#">
+                                    <span>Não consigo redefinir a senha</span>
+                                    <svg style="float:right;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-right text-light" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Tem algo errado com a minha conta</span>
+                                    <svg style="float:right;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-right text-light" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"><span>Não lembro minhas informações de login</span>
+                                    <svg style="float:right;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-right text-light" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Ajuda para entrar com o Facebook</span>
+                                    <svg style="float:right;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-right text-light" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Formas de pagamento</span>
+                                    <svg style="float:right;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-right text-light" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Criar ou entrar em um plano Família</span>
+                                    <svg style="float:right;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-right text-light" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="d-flex conteudo2">
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="col-md-6 mx-auto m-5">
+                        <h2 class="text-center">Visite nossa Comunidade</h2>
+                        <p class="text-center text-light">Tem uma pergunta? Encontre respostas na nossa Comunidade de fãs especialistas do mundo todo!</p>
+                        <div class="col-md-6 mx-auto">
+                            <button class="btn btn-sm rounded-pill text-decoration-none text-dark btn-custom btn-verde" style="font-weight: 700;">Acesse a Comunidade do Spotify</button>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </section>
+        
+        <footer class="d-flex bg-black">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <a href="#">
+                            <img src="spotify.svg" width="132px">
+                        </a>
+                    </div>
+                    <div class="col-md-2">
+                        <h6>company</h6>
+                        <ul>
+                            <li><a href="#">Sobre</a></li>
+                            <li><a href="#">Empregos</a></li>
+                            <li><a href="#">Impresa</a></li>
+                            <li><a href="#">Novidades</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h6>comunidades</h6>
+                        <ul>
+                            <li><a href="#">Artistas</a></li>
+                            <li><a href="#">Desenvolvimento</a></li>
+                            <li><a href="#">Marcas</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h6>links uteis</h6>
+                        <ul>
+                            <li><a href="#">Ajuda</a></li>
+                            <li><a href="#">Presentes</a></li>
+                            <li><a href="#">Player da web</a></li>
+                        </ul>
+                    </div>
+                        
+                    <div class="col-md-4">
+                        <ul>
+                            <li>
+                                <a href="#"><img src="instagram.png"></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="twitter.png"></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="facebook.png"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+   </body>
+</html>
