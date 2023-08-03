@@ -109,8 +109,17 @@ body {
 /*-- inicio fundo 3 --*/
 .fundo-3 {
     background: linear-gradient(#5c6f81, #4d5c6d, #13171b);
+}
+.tabela-projetos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+.fundo-3 h1 {
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+    color: #13171b;
+    font-size: clamp( 2rem, 4vw, 6rem);
 }
 .fundo-3 a {
     text-decoration: none;
@@ -121,7 +130,7 @@ body {
     max-width: 100%;
     height: auto;
 }
-.fundo-3 > * {
+.tabela-projetos > * {
     margin: 80px auto;
     padding: 10px;
     border: 1px solid #13171b;
@@ -129,7 +138,7 @@ body {
     text-align: center;
 }
 
-.fundo-3 div:hover {
+.fundo-3 .tabela-projetos > *:hover {
     border: 1px solid #a200ff;
 }
 /*-- final fundo 3 --*/
@@ -145,7 +154,6 @@ footer h6 {
     font-size: clamp( 1rem, 2vw, 2rem);
     color: #989fa7;
     margin-top: 0;
-    padding-left: 50px;
 }
 footer li {
     list-style: none;
@@ -163,7 +171,7 @@ footer img:hover {
     padding: 5px;
 }
 .contato {
-    padding: 0 0 50px 50px;
+    padding: 0 0 50px 0;
 }
 .contato li {
     padding: 5px 0;
