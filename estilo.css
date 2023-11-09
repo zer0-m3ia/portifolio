@@ -70,58 +70,31 @@ body {
 }
 /*-- final fundo 1 --*/
 
-/*-- inicio .transicao --*/
-.transicao {
-    height: 1px;
-}
-/*-- final transicao --*/
-
 /*-- inicio fundo 2 --*/
 .fundo-2 {
-    /*background: linear-gradient(#A7C7E7, #c8d1db, #c8d1db);*/
-    background: linear-gradient(#6d859c, #989fa7, #8c939b, #5c6f81);
-    height: 30vh;
-    align-items: center;
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-}
-.fundo-2 h2 {
-    margin: 0 auto;
-    color: #13171b;
-    font-size: clamp( 2rem, 4vw, 6rem);
-}
-.contacto-icons {
-    margin: 0 auto;
-    text-align: center;
-    width: fit-content;
-}
-.contacto-icons img {
-    border: 1px solid #c8d1db;
-    border-radius: 50px;
-}
-.contacto-icons img:hover {
-    border: 1px solid #a200ff;
-    border-radius: 50px;
-}
-
-/*-- final fundo 2 --*/
-
-/*-- inicio fundo 3 --*/
-.fundo-3 {
     background: linear-gradient(#5c6f81, #4d5c6d, #13171b);
+}
+.tabela-projetos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-.fundo-3 a {
+.fundo-2 h1 {
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+    color: #13171b;
+    font-size: clamp( 2rem, 4vw, 6rem);
+}
+.fundo-2 a {
     text-decoration: none;
     width: 100%;
     color: #c8d1db;
 }
-.fundo-3 img {
+.fundo-2 img {
     max-width: 100%;
     height: auto;
 }
-.fundo-3 > * {
+.tabela-projetos > * {
     margin: 80px auto;
     padding: 10px;
     border: 1px solid #13171b;
@@ -129,10 +102,10 @@ body {
     text-align: center;
 }
 
-.fundo-3 div:hover {
+.fundo-2 .tabela-projetos > *:hover {
     border: 1px solid #a200ff;
 }
-/*-- final fundo 3 --*/
+/*-- final fundo 2 --*/
 
 /*-- inicio footer --*/
 footer > * {
@@ -145,7 +118,6 @@ footer h6 {
     font-size: clamp( 1rem, 2vw, 2rem);
     color: #989fa7;
     margin-top: 0;
-    padding-left: 50px;
 }
 footer li {
     list-style: none;
@@ -163,7 +135,7 @@ footer img:hover {
     padding: 5px;
 }
 .contato {
-    padding: 0 0 50px 50px;
+    padding: 0 0 50px 0;
 }
 .contato li {
     padding: 5px 0;
@@ -175,6 +147,7 @@ footer img:hover {
 .contato a:hover {
     color: #13171b;
 }
+
 .redes {
     display: flex;
     text-align: center;
